@@ -10,13 +10,13 @@ const graphData = [
           {
             titre: 'Analyse de données avec Python',
             description: 'Développement d\'une application Python pour analyser des ensembles de données complexes.',
-            lien: 'https://github.com/pavuchochek/projet-python',
+            lien: 'https://github.com/pavuchochek/project-python',
             image: 'img/projects/python.png'
           }
         ]
       },
       { 
-        title: 'Cybersécurité',
+        title: 'Cyber',
         projets: [
           {
             titre: 'Stage Analyste SOC',
@@ -62,11 +62,11 @@ const graphData = [
         ]
       },
       { 
-        title: 'JavaScript',
+        title: 'JS',
         projets: [
           {
             titre: 'Projet interactif en JavaScript',
-            description: 'Création d\'une interface interactive pour la gestion d\'applications.',
+            description: "Développement d'un site web qui permet de communiquer en temps réel.",
             lien: 'https://github.com/pavuchochek/chatAjax',
             image: 'img/projects/chat.png'
           }
@@ -101,7 +101,7 @@ const graphData = [
           {
             titre: 'Tests d\'API avec Postman',
             description: 'Documentation automatisée et tests des fonctionnalités API.',
-            lien: 'https://github.com/pavuchochek/projet-postman',
+            lien: 'https://github.com/pavuchochek/ClientCabinet',
             image: 'img/projects/api.png'
           }
         ]
@@ -112,7 +112,7 @@ const graphData = [
           {
             titre: 'Tests unitaires avec JUnit',
             description: 'Développement de tests unitaires pour garantir la qualité du code Java.',
-            lien: 'https://github.com/pavuchochek/projet-junit',
+            lien: 'https://github.com/pavuchochek/junit',
             image: 'img/projects/tesm.png'
           }
         ]
@@ -124,27 +124,28 @@ const graphData = [
     description: 'Maintenance et évolution de logiciels, en assurant la qualité et la performance à long terme avec des outils comme SonarQube et Git.',
     noeuds: [
       { 
-        title: 'SonarQube',
+        title: 'Sonar',
         projets: [
           {
             titre: 'Analyse de code avec SonarQube',
             description: 'Utilisation de SonarQube pour l\'analyse de la qualité du code.',
-            lien: 'https://github.com/pavuchochek/projet-sonarqube',
+            lien: 'https://github.com/pavuchochek/TESM-ESPORT-MANAGER',
             image: 'img/projects/sonar.png'
           }
         ]
       },
-      { 
-        title: 'Spring Boot',
+      {
+        title: 'Spring',
         projets: [
           {
-            titre: 'Applications Spring Boot en Kotlin',
-            description: 'Développement de deux applications web avec Spring Boot et Kotlin, gestion des dépendances et configuration des services.',
+            titre: 'Application Spring Boot en Kotlin',
+            description: "Développement d’une application web avec Spring Boot et Kotlin, dans le cadre d’une plateforme de l’IRIT. L’objectif est d’ajouter des fonctionnalités et d'améliorer les services existants.",
             lien: 'https://www.irit.fr/plateformes/elaastic/',
             image: 'img/projects/elaastic_logo.webp'
           }
         ]
       }
+      
     ]
   }
 ];
