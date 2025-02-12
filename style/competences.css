@@ -1,0 +1,199 @@
+/* Conteneur principal */
+#skills-container {
+  position: relative;
+  width: 100%;
+  min-height: 110vh; /* Assure que le conteneur occupe au moins toute la hauteur de l'écran */
+  max-height: 100%;  /* Permet au conteneur de s'adapter si l'écran est plus petit */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto; /* Ajoute une barre de scroll si le contenu dépasse sur les petits écrans */
+  padding: 20px;  /* Ajoute un peu d'espace pour éviter que le contenu touche les bords */
+  box-sizing: border-box; /* Inclut le padding dans les dimensions totales */
+}
+
+
+/* Style de base pour chaque skill (cercle) */
+.circle {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #353E5D;
+  color: white;
+  text-align: center;
+  line-height: 120px;
+  font-weight: bold;
+  font-size: 18px;
+  z-index: 1;  /* Assure que le skill est au-dessus des branches */
+  border: 2px solid #B29988;  /* Bordure blanche extérieure */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);  /* Ombre douce autour du cercle */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Transition douce pour le zoom */
+}
+
+.circle:hover {
+  transform: scale(1.1);  /* Zoom au survol */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);  /* Ombre plus marquée */
+}
+
+.circle:active {
+  transform: scale(0.95);  /* Effet de contraction au clic */
+}
+
+/* Branche autour du skill */
+.branch {
+  position: absolute;
+  display: flex;
+  z-index: 0;  /* La branche doit être en dessous du skill */
+  padding: 10px;  /* Espacement interne pour ne pas que les nœuds se touchent trop */
+}
+
+/* Branche verticale (flex direction column) */
+.branch.column {
+  flex-direction: column;
+  align-items: center; /* Centrer les nœuds */
+  gap: 20px;  /* Espacement entre les nœuds */
+}
+
+/* Branche horizontale (flex direction row) */
+.branch.row {
+  flex-direction: row;
+  justify-content: space-around; /* Espacement automatique entre les nœuds */
+  gap: 20px;  /* Espacement entre les nœuds */
+}
+
+/* Style des nœuds (petits cercles) */
+.node {
+  position:relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #353e5da8;
+  color: white;
+  text-align: center;
+  line-height: 60px;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 10px;  /* Espacement des nœuds dans leur branche */
+  z-index: 2;  /* Assure que les nœuds sont au-dessus des branches */
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);  /* Ombre douce pour les nœuds */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;  /* Transition pour le zoom des nœuds */
+}
+
+
+.node:active {
+  transform: scale(0.95);  /* Effet de contraction au clic */
+}
+
+.node.selected{
+  background-color: #353E5D;
+  transform: scale(1.1);  /* Exemple d'effet de zoom */
+  transition: transform 0.3s ease;  /* Animation douce pour le zoom */
+
+}
+
+/* Ajouter des animations aux branches */
+.branch {
+  opacity: 0;
+  animation: branchAppear 0.5s forwards;  /* Animation de l'apparition des branches */
+}
+
+@keyframes branchAppear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Style des lignes */
+svg line {
+  stroke: white;
+  stroke-width: 2;
+}
+.circle.selected {
+  background-color: #B29988;
+  border: 2px solid #353E5D;  /* Exemple de bordure pour la sélection */
+  transform: scale(1.1);  /* Exemple d'effet de zoom */
+  transition: transform 0.3s ease;  /* Animation douce pour le zoom */
+  
+}
+
+.description {
+  position: absolute;
+  top: 50%;  /* Centré verticalement par rapport au container */
+  left: 50%; /* Centré horizontalement par rapport au container */
+  transform: translate(-50%, -50%); /* Pour un centrage précis */
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  width:400px;
+  font-weight: normal;
+  padding: 15px;
+  max-width: 70%; /* Limiter la largeur pour éviter que le texte déborde */
+  line-height: 1.6; /* Augmenter l'interligne pour améliorer la lisibilité */
+  background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent pour la description */
+  border-radius: 8px;  /* Coins arrondis */
+  z-index: 2; /* Assurer que la description est au-dessus des autres éléments */
+  display: none; /* Caché par défaut */
+  word-wrap: break-word; /* Permet le retour à la ligne automatique dans les mots longs */
+  white-space: normal; /* Permet aux descriptions longues de s'étirer sur plusieurs lignes */
+}
+/* Badge notification */
+.node .badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #B29988;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+.project_background{
+  background-color: white;
+  width:25%;
+  padding: 2%;
+  border-radius: 3%;
+}
+.lien_projet{
+  color: #353E5D;
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration: none;
+}
+.titre_projet{
+  color: #353E5D;
+  margin-bottom: 1%;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Jura', sans-serif;
+  position: relative;
+  height: 100vh; /* Assure que le body est toujours à hauteur de l'écran */
+  overflow-x: hidden; /* Empêche le défilement horizontal si jamais il y a des marges latérales */
+}
+
+#background-overlay {
+  position: fixed; /* Assure que l'overlay couvre toute la page, même en scrollant */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0); /* On commence avec une opacité de 0 */
+  transition: background 0.3s ease-in-out;
+  z-index: -1; /* L'overlay doit être derrière le contenu */
+}
