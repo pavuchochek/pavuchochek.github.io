@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sofia Gribanova</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet">
+    <link href="./output.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Jura', sans-serif;
+
+        }
+    </style>
+    <script src="./scripts/particles.js"></script>
+    <link rel="stylesheet" href="./style/particles.css">
+    <link rel="stylesheet" href="./style/competences.css">
+    <link rel="stylesheet" href="./style/projets.css">
+
+
+</head>
+
+
+<body class="bg-cover bg-no-repeat bg-center bg-fixed h-screen no-js"
+    style="background-image: url('./img/background.jpg');">
+
+    <canvas id="particles-canvas"></canvas>
+    <div id="background-overlay"></div>
+    <header class="sticky top-0 z-50">
+        <nav class="border-gray-200 px-4 lg:px-6 py-2.5 bg-blue_background text-white">
+            <div class="flex flex-wrap justify-between mx-auto max-w-screen-xl">
+                <div class="hidden justify-end items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
+                </div>
+                <ul class="flex flex-col mt-4 font-extrabold lg:flex-row lg:space-x-8 lg:mt-0 text-2xl ml-auto">
+
+                    <li>
+                        <a href="#competences" class="block py-2 pr-4 pl-3 text-white hover:text-gold">COMPETENCES</a>
+                    </li>
+                    <li>
+                        <a href="#projets" class="block py-2 pr-4 pl-3 text-white hover:text-gold">PROJETS</a>
+                    </li>
+                    <li>
+                        <a href="cv.html" class="block py-2 pr-4 pl-3 text-white hover:text-gold">MON CV</a>
+                    </li>
+                    <li>
+                        <a href="contact.html" class="block py-2 pr-4 pl-3 text-white hover:text-gold">ME CONTACTER</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="w-3/4 m-auto mt-10 space-y-12">
+            <!-- Section Photo et Description -->
+            <div class="flex items-center">
+                <!-- Photo à gauche -->
+                <div class="relative w-72 flex justify-center items-center">
+                    <div class="w-36 h-36 bg-blue_background rounded-full flex items-center justify-center">
+                        <img src="./img/my_photo.jpg" class="w-32 h-32 rounded-full">
+                    </div>
+                    <img src="./img/deco_pp.svg" class="absolute bottom-[-10px] left-1/2 transform -translate-x-1/2 w-56">
+                </div>
+                <!-- Description à droite -->
+                <div class="ml-12 text-left">
+                    <h1 class="text-4xl font-bold text-blue_background">SOFIA GRIBANOVA</h1>
+                    <p class="text-2xl mt-2">21 ans | Toulouse, France</p>
+                    <p class="text-2xl mt-4">
+                        Futur tech lead, déterminée à transformer des idées complexes en solutions simples et efficaces.
+                    </p>
+                </div>
+            </div>
+        
+            <!-- Section Compétences et Compétence spéciale -->
+<!-- Section Compétences et Compétence spéciale -->
+<div class="flex flex-col lg:flex-row gap-16">
+    <!-- Colonne Gauche : Compétences -->
+    <div class="flex-1 grid grid-cols-3 gap-8">
+        <!-- Cellule INTELLECT -->
+        <div class="bg-gray-800 p-4 rounded-lg shadow-lg">
+            <div class="text-white font-bold flex justify-center items-center relative mb-4">
+                <img src="./img/bg_comp.svg" class="w-80 h-auto">
+                <p class="absolute text-2xl">INTELLECT</p>
+            </div>
+            <ul class="text-xl list-image-[url(./img/one_point.svg)] space-y-4">
+                <li>Développement back-end et front-end</li>
+                <li>Optimisation de code</li>
+            </ul>
+        </div>
+        
+        <!-- Cellule CHARISME -->
+        <div class="bg-gray-800 h-auto  w-auto rounded-lg shadow-lg">
+            <div class="text-white font-bold flex justify-center items-center relative mb-4">
+                <img src="./img/bg_comp.svg" class="w-80 h-auto">
+                <p class="absolute text-2xl">CHARISME</p>
+            </div>
+            <ul class="text-xl list-image-[url(./img/one_point.svg)] space-y-4">
+                <li>Leadership en devenir</li>
+                <li>Créativité dans les solutions</li>
+            </ul>
+        </div>
+        
+        <!-- Cellule AGILITÉ -->
+        <div class="bg-gray-800 p-4 rounded-lg shadow-lg">
+            <div class="text-white font-bold flex justify-center items-center relative mb-4">
+                <img src="./img/bg_comp.svg" class="w-80 h-auto">
+                <p class="absolute text-2xl">AGILITÉ</p>
+            </div>
+            <ul class="text-xl list-image-[url(./img/one_point.svg)] space-y-4">
+                <li>Adaptabilité technologique</li>
+                <li>Polyvalence en langages</li>
+                <li>Apprentissage rapide</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Colonne Droite : Compétence spéciale et boutons -->
+    <div class="w-full lg:w-1/3 flex flex-col justify-between space-y-8">
+        <!-- Compétence spéciale -->
+        <div class="bg-gray-900 p-4 rounded-lg shadow-lg">
+            <div class="text-white font-bold flex justify-center items-center relative w-fit mx-auto mb-4">
+                <img src="./img/bg_comp.svg" class="w-80 h-auto">
+                <p class="absolute text-2xl">COMP.SPECIALE</p>
+            </div>
+            <h1 class="text-2xl text-center text-white">Architecte du code</h1>
+            <div class="bg-gold rounded-lg border border-black p-3 mt-4">
+                <p class="text-xl text-center">
+                    Ma maîtrise de l'architecture de code me permet de concevoir des structures élégantes,
+                    performantes et parfaitement adaptées aux besoins, transformant chaque projet en une œuvre
+                    technique et fonctionnelle.
+                </p>
+            </div>
+        </div>
+        <!-- Boutons -->
+        <div class="flex flex-col items-center space-y-4 mt-8">
+            <a class="bg-blue_background text-white p-4 w-60 text-2xl hover:animate-blink text-center"
+               href="#projets">VOIR MES PROJETS</a>
+            <a class="bg-gold p-4 w-60 text-2xl hover:animate-blink text-center"
+               href="cv.html">VOIR MON CV</a>
+        </div>
+    </div>
+</div>
+
+</div>
+
+        </div>
+        
+        
+        <div id="competences">
+            <h1 class="text-blue_background text-5xl text-center font-bold">Mes compétences</h1>
+            <div id="graph-container " class="anim-scroll">
+
+                <div id="skills-container">
+                    <div id="description" class="description"></div>
+
+
+                </div>
+                <div id="project-container"></div>
+
+            </div>
+            <script src="./scripts/competences.js"></script>
+        </div>
+        <h1 class="titre_partie">Mes projets</h1>
+        <div id="projets" class="text-center text-4xl font-bold mt-20 anim-scroll">
+            <h1 class="annee">2024 - 2025</h1>
+            <div class="flex justify-center items-center">
+                <div class="projets">
+                    <div class="project">
+                        <img src="img/projects/logo-palendar.png" class="project-image">
+                        <h1 class="titre_projet">Palendar</h1>
+                        <p class="text-xl">Creation d'une web app entiere </p>
+                        <div class="tags">
+                            <div class="tag_competence">Concevoir</div>
+                            <div class="tag_competence">Développer</div>
+                            <div class="tag_competence">Maintenir</div>
+                            <div class="tag">React</div>
+                            <div class="tag">Python</div>
+                        </div>
+                        <a href="https://beta.palendar.gamingdy.fr" class="lien_un_projet">Voir le projet</a>
+                    </div>
+                    <div class="project">
+                        <img src="img/projects/elaastic_logo.webp" class="project-image">
+                        <h1 class="titre_projet">Applications Spring Boot en Kotlin</h1>
+                        <p class="text-xl">Développement de deux applications web avec Spring Boot et Kotlin, gestion
+                            des dépendances et configuration des services.</p>
+                        <div class="tags">
+                            <div class="tag_competence">Concevoir</div>
+                            <div class="tag">Kotlin</div>
+                            <div class="tag">Spring Boot</div>
+                        </div>
+                        <a href="https://github.com/pavuchochek/projets-kotlin" class="lien_un_projet">Voir le
+                            projet</a>
+                    </div>
+
+                    <div class="project">
+                        <img src="img/projects/K8S-logo.png" class="project-image">
+                        <h1 class="titre_projet">Orchestration avec Kubernetes</h1>
+                        <p class="text-xl">Mise en place d'un système d'orchestration de conteneurs avec Kubernetes.</p>
+                        <div class="tags">
+
+                            <div class="tag_competence">Intégrer</div>
+                            <div class="tag">Kubernetes</div>
+                            <div class="tag">Docker</div>
+
+                        </div>
+                        <a href="https://github.com/pavuchochek/projet-kubernetes" class="lien_un_projet">Voir le
+                            projet</a>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <h1 class="annee">2023 - 2024</h1>
+            <div class="flex justify-center items-center">
+                <div class="projets">
+                    <div class="project">
+                        <img src="img/projects/tesm.png" class="project-image">
+                        <h1 class="titre_projet">Application de gestion de tournoi E-Sport</h1>
+                        <p class="text-xl">Optimisation et structuration de l'application avec des design patterns, MVC,
+                            DAO et Java Derby.</p>
+                        <div class="tags">
+                            <div class="tag_competence">Concevoir</div>
+                            <div class="tag">Java</div>
+                            <div class="tag">JDBC</div>
+
+                        </div>
+                        <a href="https://github.com/pavuchochek/projet-java-tournoi" class="lien_un_projet">Voir le
+                            projet</a>
+                    </div>
+
+                    <div class="project">
+                        <img src="img/projects/cabinet.png" class="project-image">
+                        <h1 class="titre_projet">API REST pour un cabinet médical</h1>
+                        <p class="text-xl">Implémentation des fonctionnalités CRUD en PHP avec gestion des erreurs HTTP.
+                        </p>
+                        <div class="tags">
+
+                            <div class="tag_competence">Développer</div>
+                            <div class="tag">PHP</div>
+                            <div class="tag">API REST</div>
+                        </div>
+                        <a href="https://github.com/pavuchochek/projet-api-php" class="lien_un_projet">Voir le
+                            projet</a>
+                    </div>
+                    <div class="project">
+                        <img src="img/projects/chat.png" class="project-image">
+                        <h1 class="titre_projet">Tchatbot web</h1>
+                        <p class="text-xl">Développement d'un site web qui permet de communiquer en temps reel</p>
+                        <div class="tags">
+
+                            <div class="tag_competence">Développer</div>
+                            <div class="tag">PHP</div>
+                            <div class="tag">JS</div>
+                            <div class="tag">MySQL</div>
+                        </div>
+                        <a href="" class="lien_un_projet">Voir le projet</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+
+</html>
