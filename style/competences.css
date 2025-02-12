@@ -1,5 +1,7 @@
 /* Conteneur principal */
-#skills-container {
+
+#graph-container {
+  
   position: relative;
   width: 100%;
   min-height: 110vh; /* Assure que le conteneur occupe au moins toute la hauteur de l'écran */
@@ -7,11 +9,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: auto; /* Ajoute une barre de scroll si le contenu dépasse sur les petits écrans */
   padding: 20px;  /* Ajoute un peu d'espace pour éviter que le contenu touche les bords */
   box-sizing: border-box; /* Inclut le padding dans les dimensions totales */
-}
 
+}
 
 /* Style de base pour chaque skill (cercle) */
 .circle {

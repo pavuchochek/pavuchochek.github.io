@@ -80,7 +80,7 @@ main {
 }
 
 .submit-button {
-    background-color: #007BFF;
+    background-color: rgb(53, 62, 93);
     color: white;
     font-weight: bold;
     padding: 10px 20px;

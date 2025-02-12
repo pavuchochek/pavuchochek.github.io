@@ -11,7 +11,7 @@ const graphData = [
             titre: 'Analyse de données avec Python',
             description: 'Développement d\'une application Python pour analyser des ensembles de données complexes.',
             lien: 'https://github.com/pavuchochek/projet-python',
-            image: 'https://via.placeholder.com/150'
+            image: 'img/projects/python.png'
           }
         ]
       },
@@ -85,7 +85,7 @@ const graphData = [
             titre: 'Application conteneurisée avec Docker',
             description: 'Création d\'une application conteneurisée pour la gestion des environnements de développement.',
             lien: 'https://github.com/pavuchochek/chatAjax',
-            image: 'img/projects/docker.png'
+            image: 'img/projects/docker.jpg'
           }
         ]
       }
@@ -102,7 +102,7 @@ const graphData = [
             titre: 'Tests d\'API avec Postman',
             description: 'Documentation automatisée et tests des fonctionnalités API.',
             lien: 'https://github.com/pavuchochek/projet-postman',
-            image: 'https://via.placeholder.com/150'
+            image: 'img/projects/api.png'
           }
         ]
       },
@@ -113,7 +113,7 @@ const graphData = [
             titre: 'Tests unitaires avec JUnit',
             description: 'Développement de tests unitaires pour garantir la qualité du code Java.',
             lien: 'https://github.com/pavuchochek/projet-junit',
-            image: 'img/projects/tesm².png'
+            image: 'img/projects/tesm.png'
           }
         ]
       }
@@ -162,7 +162,7 @@ function calculateHexagonPosition(index, radius) {
 
 // Créer un cercle (skill)
 function createCircle(skill, index) {
-  const { x, y } = calculateHexagonPosition(index, 200);  // Rayon de 200 pour les skills
+  const { x, y } = calculateHexagonPosition(index, 300);  // Rayon de 200 pour les skills
   const circle = document.createElement("div");
   circle.className = "circle";
   circle.style.left = `${x - 50}px`;
@@ -177,7 +177,7 @@ function createBranch(skill, indexOfSkill) {
   const branch = document.createElement("div");
   branch.className = "branch";
 
-  const { x, y } = calculateHexagonPosition(indexOfSkill, 400);  // Positionnement de la branche
+  const { x, y } = calculateHexagonPosition(indexOfSkill, 500);  // Positionnement de la branche
   branch.style.left = `${x - 50}px`;
   branch.style.top = `${y - 50}px`;
 
@@ -257,6 +257,7 @@ function showNodeProjects(node, event) {
 
       // Afficher la description du nouveau skill
       showDescription(graphData.findIndex(skill => skill.title === newSkillElement.innerText));
+      
 
       // Enlever la classe 'selected' de tous les nodes
       nodes.forEach(node => node.classList.remove('selected'));
@@ -324,7 +325,9 @@ function showDescription(skillIndex) {
   //reset tout les nodes selected
   const nodes = document.querySelectorAll('.node');
   nodes.forEach(node => node.classList.remove('selected'));
-
+  //reset le project container
+  const projectContainer = document.getElementById("project-container");
+  projectContainer.innerHTML = '';
   // Afficher le texte de la description au centre du skill container
   descriptionElement.style.display = 'block';  // Afficher la description
 }
@@ -385,6 +388,44 @@ window.addEventListener('scroll', adjustNavBackground);
 
 // Ajouter l'événement de scroll
 window.addEventListener('scroll', adjustNavBackground);
+
+
+// Fonction qui sélectionne le skill en rapport avec le nom
+function selectSkill(skillName) {
+  // Vérifie si graphData existe et contient un tableau
+  if (!Array.isArray(graphData)) {
+    console.error("graphData is not an array or not defined.");
+    return;
+  }
+
+  // Trouver l'index du skill
+  const skillIndex = graphData.findIndex(skill => skill.title.trim() === skillName.trim());
+
+  // Si le skill est trouvé, afficher sa description
+  if (skillIndex !== -1) {
+    showDescription(skillIndex);
+    window.location.href = '#competences';  // Défilement vers la description
+  } else {
+    console.warn(`Skill with name "${skillName}" not found.`);
+  }
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  // Vérification de l'existence de l'élément
+  const tags = document.querySelectorAll('.tag_competence');
+  if (tags.length === 0) {
+    console.warn("No elements with class 'tag-competence' found.");
+    return;
+  }
+
+  // Ajout d'un écouteur d'événement pour chaque tag
+  tags.forEach(tag => {
+    tag.addEventListener('click', () => {
+      const skillName = tag.textContent.trim();  // Récupérer et nettoyer le texte du tag
+      selectSkill(skillName);
+    });
+  });
+});
 
 
 
