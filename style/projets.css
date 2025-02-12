@@ -13,7 +13,6 @@
 .project {
     background-color: #ffffff8e;
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -40,7 +39,7 @@
     text-align: center;
 }
 
-.lien_un_projet {
+.project-link {
     color: #052a68;
     font-size:20px;
     text-decoration: none;
@@ -48,7 +47,7 @@
     margin-top: 10px;
 }
 
-.lien_un_projet:hover {
+.project-link:hover {
     text-decoration: underline;
 }
 

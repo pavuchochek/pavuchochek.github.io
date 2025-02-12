@@ -1,0 +1,85 @@
+
+
+/* Main Content */
+main {
+    padding: 20px;
+}
+
+/* Flex utilities */
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.items-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+/* Title and link */
+.cv-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.cv-link {
+    display: block;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.cv-link:hover {
+    background-color: #0056b3;
+}
+
+/* Back link */
+.back-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.arrow-img {
+    width: 2rem;
+    margin-bottom: 8px;
+}
+
+.back-link p {
+    font-size: 1.125rem;
+    text-align: center;
+}
+
+/* PDF Container */
+.pdf-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.embed-container {
+    max-width: 800px;
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+    background-color: #fff;
+    padding: 20px;
+}
