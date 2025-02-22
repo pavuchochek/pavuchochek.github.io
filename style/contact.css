@@ -100,3 +100,29 @@ main {
     width: 2rem;
     margin-bottom: 8px;
 }
+
+.github-button{
+    text-decoration: none;
+    background-color: #333;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.linkedin-button{
+    text-decoration: none;
+    background-color: #0077b5;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
